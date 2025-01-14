@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<div>
     <title>Pagina #1</title>
     <meta charset="utf-8">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -27,41 +27,43 @@
         <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
     	<script src="js/jquery.mousewheel.min.js"></script>
     	<script src="js/jquery.touchSwipe.min.js"></script>
-        <script>
-			$(function() {
-				$('#foo').carouFredSel({
-					auto: false,
-					responsive: true,
-					width: '100%',
-					prev: '#prev',
-					next: '#next',
-					scroll: 1,
-					items: {
-						height: 'auto',
-						width: 270,
-						visible: {
-							min: 1,
-							max: 1
-						}
-					},
-					mousewheel: true,
-					swipe: {
-						onMouse: true,
-						onTouch: true
-					}
-				});
-			});
-            $(document).ready(function(){
-                jQuery('.camera_wrap').camera();
+      <script>
+        $(function() {
+            $('#foo').carouFredSel({
+                auto: false,
+                responsive: true,
+                width: '100%',
+                prev: '#prev',
+                next: '#next',
+                scroll: 1,
+                items: {
+                    height: 'auto' ,
+                    width:  250 ,  
+                    visible: {
+                        min: 1,
+                        max: 1
+                    }
+                },
+                mousewheel: true,
+                swipe: {
+                    onMouse: true,
+                    onTouch: true
+                }
             });
-		</script>
-</head>
+        });
+        $(document).ready(function(){
+            jQuery('.camera_wrap').camera();
+        });
+    </script>
+    
+    
+</div>
 <body>
   <header>
     <div class="container">
         <div class="row">
             <div class="span12 header-block">
-                <h1>Primera Página Gustos</h1>
+                <h1>La Arqueología</h1>
             </div>
         </div>
     </div>
@@ -75,42 +77,15 @@
         </div>
         <div data-src="img/slide2.jpg">
         </div>
+        <div data-src="img/slide3.jpg">
+        </div>
       </div>
     </div>     
-    <div class="container pad-1">
-      <div class="row">
-        <div class="span12">
-          <h3 class="indent-1 center">What we do</h3>
-        </div>
-       </div>  
-       <div class="row block-1">
-          <div class="span3">
-              <img src="img/page1-img1.png" alt="">
-              <p class="text-info"><a href="#" class="text-info">Espiciatis</a></p>
-              Lorem ipsum dolor sit amet, consectetuer adg elit. Praesent vestibulum mollacus. Aenean nonummy hendi.
-          </div> 
-          <div class="span3">
-              <img src="img/page1-img2.png" alt="">
-              <p class="text-info"><a href="#" class="text-info">Omnis</a></p>
-              Lorem ipsum dolor sit amet, consectetuer adg elit. Praesent vestibulum mollacus. Aenean nonummy hendi.
-          </div> 
-          <div class="span3">
-              <img src="img/page1-img3.png" alt="">
-              <p class="text-info"><a href="#" class="text-info">Voluptatem</a></p>
-              Lorem ipsum dolor sit amet, consectetuer adg elit. Praesent vestibulum mollacus. Aenean nonummy hendi.
-          </div> 
-          <div class="span3">
-              <img src="img/page1-img4.png" alt="">
-              <p class="text-info"><a href="#" class="text-info">Espiciatis</a></p>
-              Lorem ipsum dolor sit amet, consectetuer adg elit. Praesent vestibulum mollacus. Aenean nonummy hendi.
-          </div> 
-       </div> 
-    </div> 
     <div class="bg-grey">
        <div class="container pad-1">    
            <div class="row">
               <div class="span12">
-                <h3 class="indent-1 center">Best food is natural food!</h3>
+                <h3 class="indent-1 center">Carracteristicas y Explicacion</h3>
               </div>
            </div> 
           <div class="row">
@@ -118,36 +93,36 @@
                    <div class="list_carousel responsive clearfix">
                       <ul id="foo">
                         <li>
-                            <div class="row">
-                              <div class="span6 block-2">
-                                <div class="clearfix">
-                                    <img src="img/page1-img5.jpg" alt="">
-                                    <div class="extra-wrap">
-                                        <strong>Robert Smith</strong><br>
-                                        voluptatem accusantium
-                                    </div>
-                                </div>
-                                <blockquote>Cum sociis natoque penatibus et mrient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci.<br>
-                                    <a href="#" class="btn">Learn more</a>
-                                </blockquote>
+                          <div class="row">
+                            <div class="span6 block-2">
+                              <div class="clearfix">
+                                  <img src="img/page1-img6.jpg" alt="">
+                                  <div class="extra-wrap">
+                                      <strong>Beneficios</strong><br>
+                                      Por que me Gusta?
+                                  </div>
                               </div>
-                              <div class="span6 block-2-img">
-                                <div class="row">
-                                    <div class="span3"><img src="img/page1-img7.jpg" alt="" class="img-rounded"></div>
-                                    <div class="span3"><img src="img/page1-img8.jpg" alt="" class="img-rounded"></div>
-                                    <div class="span3"></div>
-                                    <div class="span3"><img src="img/page1-img9.jpg" alt="" class="img-rounded"></div>
-                                </div>
+                              <blockquote><br>
+                                  <a href="#" class="btn">Learn more</a>
+                              </blockquote>
+                            </div>
+                            <div class="span6 block-2-img">
+                              <div class="row">
+                                  <div class="span3"><img src="img/page1-img9.jpg" alt="" class="img-rounded"></div>
+                                  <div class="span3"><img src="img/page1-img7.jpg" alt="" class="img-rounded"></div>
+                                  <div class="span3"></div>
+                                  <div class="span3"><img src="img/page1-img8.jpg" alt="" class="img-rounded"></div>
                               </div>
-                           </div>   
-                        </li>
+                            </div>
+                         </div>   
+                      </li>
                         <li>
                             <div class="row">
                               <div class="span6 block-2">
                                 <div class="clearfix">
                                     <img src="img/page1-img6.jpg" alt="">
                                     <div class="extra-wrap">
-                                        <strong>David Brown</strong><br>
+                                        <strong>Beneficios</strong><br>
                                         accusantium voluptatem 
                                     </div>
                                 </div>
