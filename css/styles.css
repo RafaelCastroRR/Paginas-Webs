@@ -11544,30 +11544,29 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: #1e30f3;
-  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  background: #2c2c2c; /* Gris oscuro inicial */
+  background: linear-gradient(135deg, #2c2c2c 70%, #4a4a4a 100%); /* Gradiente gris oscuro */
 }
+
 
 .profile {
   position: relative;
-  height: 75vw;
-  width: 75vw;
+  width: 100%; 
   border-radius: 5vw;
-  margin-top: 5vw;
-  max-height: 40rem;
-  max-width: 40rem;
+  margin: 5vw auto; 
+  overflow: hidden;
+  aspect-ratio: 1; 
 }
+
 .profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
+  width: 100%; 
+  height: auto;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  border-radius: 5vw; /
 }
 
-
-/* Estilos generales */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
@@ -11622,32 +11621,6 @@ a:hover {
   color: #1e73be;
 }
 
-/* Header */
-header {
-  background-color: #f8f9fa;
-  padding: 80px 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-header p {
-  font-size: 1.25rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-header img {
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
 
 /* Sección principal */
 section {
@@ -11657,98 +11630,146 @@ section {
 section h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #FFFFFF;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
 
 section .lead {
   font-size: 1.2rem;
-  color: #777;
+  color: #FFFFFF;
   margin-bottom: 20px;
   line-height: 1.6;
-}
-
-/* Imagenes */
-img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
 img:hover {
   transform: scale(1.05);
 }
 
-
 .bg-light {
   background-color: #f4f4f4;
 }
 
 
-.btn-custom {
-  background-color: #1e73be;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117;
 }
 
-.btn-custom:hover {
-  background-color: #004a75;
-  transform: translateY(-2px);
+/* Navbar Styling */
+.navbar {
+  background-color: #161b22;
+  border-bottom: 2px solid #21262d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand {
+  color: #58a6ff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+.navbar-menu a {
+  color: #8b949e;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.navbar-menu a:hover {
+  color: #58a6ff;
 }
 
-.btn-custom:active {
-  transform: translateY(0);
+/* Header Section */
+header {
+  background: linear-gradient(rgba(13, 17, 23, 0.9), rgba(13, 17, 23, 0.9)), url("assets/slide4.jpg") center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+header p {
+  font-size: 1.2rem;
+  color: #8b949e;
 }
 
-/* Responsive design */
+/* Mis Gustos Section */
+section {
+  padding: 60px 20px;
+  margin-bottom: 20px;
+}
+#mis-gustos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  #mis-gustos {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+.bg-light {
+  background-color: #161b22 !important;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+h2 {
+  color: #58a6ff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.lead {
+  font-size: 1.1rem;
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.img-fluid {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn-primary {
+  background-color: #000;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar-nav {
-      text-align: center;
-      margin-top: 15px;
-  }
-
-  header h1 {
-      font-size: 3rem;
-  }
-
-  header p {
-      font-size: 1.1rem;
-  }
-
-  .container {
-      padding-left: 15px;
-      padding-right: 15px;
-  }
-
-  section h2 {
-      font-size: 2rem;
-  }
-
-  section .lead {
-      font-size: 1rem;
-  }
-
-  .navbar-toggler {
-      border-color: #1e73be;
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar-nav .nav-link {
-      font-size: 0.9rem;
-  }
-
   header h1 {
       font-size: 2.5rem;
   }
-
-  section h2 {
-      font-size: 1.75rem;
+  header p {
+      font-size: 1rem;
+  }
+  h2 {
+      font-size: 1.8rem;
   }
 }
+
