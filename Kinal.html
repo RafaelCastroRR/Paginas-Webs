@@ -10,17 +10,42 @@
 
 <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#about">Acerca de</a></li>
-            <li><a href="#programs">Programas</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-        <div class="navbar-image">
-            <img src="https://static.wixstatic.com/media/128120_082b0a9600da4e99a6462def860f2a6e~mv2.png/v1/fill/w_159,h_66,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Fundacion%20KinalBlanco.png"
-                alt="Logo">
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="https://static.wixstatic.com/media/128120_082b0a9600da4e99a6462def860f2a6e~mv2.png/v1/fill/w_159,h_66,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Fundacion%20KinalBlanco.png"
+                    alt="Logo">
+            </a>
         </div>
+        <ul class="navbar-links">
+            <li class="dropdown">
+                <a href="index.html">Quienes somos</a>
+                <ul class="submenu">
+                    <li><a href="#about-us">Fundacion</a></li>
+                    <li><a href="#mission">Patonatro</a></li>
+                    <li><a href="#mission">Sponsors</a></li>
+                    <li><a href="#mission">Presskit</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#about">Educacion</a>
+                <ul class="submenu">
+                    <li><a href="#about-school">Peritos Tecnicos</a></li>
+                    <li><a href="#curriculum">Ciclo Basico</a></li>
+                    <li><a href="#courses">Carreras de Tecnologia</a></li>
+                    <li><a href="#courses">Escuela Tecnica</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#programs">Antiguos Alumonos</a>
+                <ul class="submenu">
+                    <li><a href="#testimonials">Trabajos</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" id="blog-menu">
+                <a href="#contact">Blog</a>
+            </li>
     </nav>
+    
 
     <header class="main-header">
         <div class="video-container">
@@ -46,27 +71,28 @@
             alumnos y el medio para servir a los demás.</p>
     </section>
 
-
     <section class="featured-products">
         <div class="product-card">
             <img src="https://static.wixstatic.com/media/128120_e70270b3fe48460d91faa702eb0e3619~mv2.jpg/v1/fill/w_280,h_292,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/individualMesa%20de%20trabajo%202.jpg"
                 alt="Product 1">
             <p>Kinal ofrece su programa de Educación General Básica para todos aquellos jóvenes que buscan una
-                orientación técnica y excelencia académica..</p>
+                orientación técnica y excelencia académica.</p>
+            <button class="button">Ver más</button>
         </div>
         <div class="product-card">
             <img src="https://static.wixstatic.com/media/128120_f7e5ea02ac774e6fba7863af89dd605d~mv2.jpg/v1/fill/w_280,h_292,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ruta02.jpg"
                 alt="Product 2">
-            <p>Durante 3 años se prepara al joven de forma técnica y académica, el egresado estará listo trabajar en el
+            <p>Durante 3 años se prepara al joven de forma técnica y académica, el egresado estará listo para trabajar en el
                 ramo técnico de la especialidad que eligió estudiar; el título obtenido le permitirá ingresar a la
                 universidad.</p>
+            <button class="button">Ver más</button>
         </div>
         <div class="product-card">
             <img src="https://static.wixstatic.com/media/128120_3235e56086f844b48fffcc2d7b117fa2~mv2.jpg/v1/fill/w_280,h_292,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ruta03.jpg"
                 alt="Product 3">
-
             <p>Contamos con más de 30 especialidades técnicas y tecnológicas que pueden favorecer tu crecimiento y/o tu
                 inserción laboral.</p>
+            <button class="button">Ver más</button>
         </div>
         <div class="product-card">
             <img src="https://static.wixstatic.com/media/128120_f64d9e1f7bbc4e74bd1b66317a121b4b~mv2.jpg/v1/fill/w_280,h_321,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ruta04.jpg"
@@ -74,8 +100,10 @@
             <p>Dirigido al fortalecimiento de mandos medios y especialmente aquellos que han cursado una carrera técnica
                 y desean continuar con estudios a nivel universitario. Estos estudios son avalados por la Universidad
                 del Istmo.</p>
+            <button class="button">Ver más</button>
         </div>
     </section>
+    
 
     <section class="carousel-section" id="carousel">
         <div class="carousel-container">
@@ -228,19 +256,228 @@
         </div>
     </footer>
 
+    <script>
+        // Función para alternar el menú en pantallas pequeñas
+function toggleMenu() {
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarLinks.classList.toggle('active');
+}
+
+// Función para alternar los submenús al hacer clic
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener('click', function (e) {
+        const submenu = dropdown.querySelector('.submenu');
+        submenu.classList.toggle('active');
+    });
+});
+
+    </script>
+
+
 
 </body>
 
 </html>
 <style>
-    .navbar {
-        background-color: #0f1d49;
-        padding: 15px 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
+
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Barra de navegación */
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Estilo base del menú */
+.navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+    position: relative;  /* Necesario para el posicionamiento del submenú */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+/* Estilo para submenús */
+.submenu {
+    display: none; /* Ocultamos los submenús por defecto */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    list-style: none;
+    background-color: #0f1d49;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Mostrar el submenú cuando se pasa el ratón sobre el elemento */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;  /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column;
     }
+
+    .navbar-links.active {
+        display: flex;  /* Muestra el menú cuando tenga la clase 'active' */
+    }
+
+    .navbar-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    /* Submenú en pantallas pequeñas */
+    .dropdown .submenu {
+        position: static;  /* Cambiar el posicionamiento para que se muestre debajo */
+    }
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:  #0f1d49;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #f39c12;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Estilo del logo */
+.navbar-logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto hover para el logo */
+.navbar-logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Estilo de los enlaces */
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.navbar-links li {
+    margin-left: 30px;
+    position: relative;
+}
+
+/* Enlaces de navegación */
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+    overflow: hidden;
+}
+
+
+
+
+.navbar-links a:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+/* Estilo para submenús */
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;  /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column;
+    }
+
+    .navbar-links.active {
+        display: flex;  /* Muestra el menú cuando tenga la clase 'active' */
+    }
+
+    .navbar-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    /* Submenú en pantallas pequeñas */
+    .dropdown .submenu {
+        position: static;  /* Cambiar el posicionamiento para que se muestre debajo */
+    }
+}
+
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 
 
     .separator img {
@@ -248,11 +485,6 @@
         width: 10%;
     }
 
-    .navbar ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-    }
 
     .info-section {
         padding: 30px 70px;
@@ -383,58 +615,6 @@
         }
     }
 
-
-    .navbar {
-        background-color: #0f1d49;
-        padding: 8px 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    .navbar {
-        background-color: #0f1d49;
-        padding: 8px 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-    .navbar-image img {
-        max-height: 60px;
-        object-fit: contain;
-    }
-
-
-    .navbar ul {
-        display: flex;
-        justify-content: flex-start;
-        list-style: none;
-        margin: 0;
-    }
-
-    .navbar ul li {
-        margin: 0 10px;
-    }
-
-    .navbar ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .navbar ul li a:hover {
-        color: #F1C40F;
-        /* Color dorado */
-    }
 
 
 
@@ -587,6 +767,31 @@
         transition: transform 0.3s ease;
     }
 
+    /* Estilo del botón */
+.button {
+    background-color: #0066cc;  /* Color azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: #004d99;  /* Color azul más oscuro al hacer hover */
+}
+
+/* Estilo del texto */
+.product-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
 
     .product-card:hover {
         transform: scale(1.05);
